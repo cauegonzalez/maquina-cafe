@@ -10,6 +10,9 @@ Considerações iniciais:
 
   
 ```
+CREATE SCHEMA `cafe` ;
+```
+```
 CREATE TABLE `cargo` (
   `idcargo` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,

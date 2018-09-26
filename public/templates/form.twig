@@ -1,0 +1,49 @@
+{% extends 'index.twig' %}
+
+{% block titulo %}
+    {% if template.objFuncionario.idfuncionario != '' %}
+        Editar {{ template.objFuncionario.nome }}
+    {% else %}
+        Novo Funcionário
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <form action="trata-form.php" method="POST" onsubmit="return validaForm()" id="cadastraFuncionario">
+                <div class="form-group">
+                    <label for="nome">Nome Funcionário:</label>
+                    <input type="text" value="{{ template.objFuncionario.nome }}" class="form-control" name="nome" id="nome" placeholder="Nome e Sobrenome">
+                    <input type="hidden" value="{{ template.objFuncionario.idfuncionario }}" name="idfuncionario" id="idfuncionario">
+                </div>
+                <div class="form-group">
+                    <label for="idcargo">Cargo:</label>
+                    <select id="idcargo" name="idcargo" class="form-control">
+                        <option value="">SELECIONE</option>
+                        {% for cargo in template.cargos %}
+                            {% set selected = "" %}
+                            {% if cargo.idcargo == template.objFuncionario.cargoId %}
+                                {% set selected = "selected=selected" %}
+                            {% endif %}
+                            <option value="{{ cargo.idcargo }}" {{ selected }}>{{ cargo.nome }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-dark" >Salvar</button>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+{% endblock %}

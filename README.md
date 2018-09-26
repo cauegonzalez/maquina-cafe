@@ -1,5 +1,5 @@
 # maquina-cafe
-Repositório para a criação de um CRUD em PHP OO
+Repositório para a criação de um pequeno sistema para controle do consumo de café de uma empresa.
 
 Considerações iniciais:
 **Versão do PHP**: 7.2.8

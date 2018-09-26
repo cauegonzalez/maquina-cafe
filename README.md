@@ -68,7 +68,7 @@ VALUES
 ('Diretor', 'S'),
 ('Analista de Sistemas', 'S'),
 ('Desenvolvedor', 'N'),
-('Web Designer', 'N');
+('Web Designer', 'N'),
 ('Estagiário', 'N'),
-('Recepcionista', 'N'),
+('Recepcionista', 'N');
 ```

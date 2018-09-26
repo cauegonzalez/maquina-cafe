@@ -1,14 +1,17 @@
 # maquina-cafe
 Repositório para a criação de um pequeno sistema para controle do consumo de café de uma empresa.
 
-Considerações iniciais:
-**Versão do PHP**: 7.2.8
-**Endereço inicial**: maquina-cafe/public
-**Necessário executar**: composer update
-**Arquivo com os dados de acesso ao banco de dados**: maquina-cafe/config.php
-**Script para criação e alimentação prévia do banco de dados**:
+Considerações iniciais:  
+**Versão do PHP**: 7.2.8  
+**Endereço inicial**: maquina-cafe/public  
+**Necessário executar**: composer update  
+**Arquivo com os dados de acesso ao banco de dados**: maquina-cafe/config.php  
+**Script para criação e alimentação prévia do banco de dados**:  
 
-
+  
+```
+CREATE SCHEMA `cafe` ;
+```
 ```
 CREATE TABLE `cargo` (
   `idcargo` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -65,7 +68,7 @@ VALUES
 ('Diretor', 'S'),
 ('Analista de Sistemas', 'S'),
 ('Desenvolvedor', 'N'),
-('Web Designer', 'N');
+('Web Designer', 'N'),
 ('Estagiário', 'N'),
-('Recepcionista', 'N'),
+('Recepcionista', 'N');
 ```
